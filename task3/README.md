@@ -35,7 +35,7 @@ sudo ufw enable
 
 sudo ufw status
 
-![image0002](image0008.png)
+![image0010](image0010.png)
 
 ### Проверка nginx
 
