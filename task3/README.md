@@ -17,6 +17,7 @@
 
 
 ###Установка Nginx
+
 sudo apt get update 
 
 sudo apt install nginx
@@ -25,6 +26,7 @@ sudo apt install nginx
 
 
 ###Настройка фаервола ufw
+
 sudo ufw app list
 
 sudo ufw allow 'Nginx Full'
@@ -36,6 +38,7 @@ sudo ufw status
 ![image0002](image0008.png)
 
 ### Проверка nginx
+
 sudo systemctl status nginx
 
 curl 54.221.128.94
