@@ -25,7 +25,7 @@ sudo apt install nginx
 ![image0001](image0007.png)
 
 
-###Настройка фаервола ufw
+### Настройка фаервола ufw
 
 sudo ufw app list
 
