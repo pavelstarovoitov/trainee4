@@ -16,6 +16,32 @@
 ![image0006](/home/starik/image0006.png)
 
 
+###Установка Nginx
+sudo apt get update 
+
+sudo apt install nginx
+![image0001](image0001.png)
+
+
+###Настройка фаервола ufw
+sudo ufw app list
+
+sudo ufw allow 'Nginx Full'
+
+sudo ufw enable
+
+sudo ufw status
+
+![image0002](image0002.png)
+
+### Проверка nginx
+sudo systemctl status nginx
+
+curl 54.221.128.94
+![image0003](image0003.png)
+
+
+
 
 
 
