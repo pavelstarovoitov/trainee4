@@ -83,12 +83,14 @@ sudo apt install php libapache2-mod-php
 
 ![image0017](image0017.png)
 
+## [nginx.conf](nginx.conf)
+
 ![image0018](image0018.png)
 
 ![image0019](image0019.png)
 
 
-### [index.html](index.html)
+## [index.html](index.html)
 
 
 
