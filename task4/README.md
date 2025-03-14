@@ -48,7 +48,7 @@ webroot
 
 ![image0005](image0005.png)
 
-### Второй метод. Сомоподписаный сертификат, использую openssl
+### Второй метод. Сомоподписанный сертификат, использую openssl
 
 sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/nginx-selfsigned.key -out /etc/ssl/certs/nginx-selfsigned.crt
 
@@ -91,6 +91,10 @@ sudo apt install php libapache2-mod-php
 
 
 ## [index.html](index.html)
+
+## [Cсылка на сайт](https://trainee4.com)
+
+
 
 
 
