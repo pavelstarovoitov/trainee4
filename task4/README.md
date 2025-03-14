@@ -61,9 +61,36 @@ sudo openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/privat
 
 
 
-###Добавить редирект с 80 на 443 порт для всех подключений (cайт должен работать только по HTTPS).
+### Добавить редирект с 80 на 443 порт для всех подключений (cайт должен работать только по HTTPS).
 
-![image0006](image0006.png)
+![image0014](image0014.png)
+![image0013](image0013.png)
+
+
+
+### Установка Apache и PHP
+
+sudo apt install apache2
+
+
+sudo apt install php libapache2-mod-php 
+
+![image0015](image0015.png)
+
+![image0016](image0016.png)
+
+### Настройка location 
+
+![image0017](image0017.png)
+
+![image0018](image0018.png)
+
+![image0019](image0019.png)
+
+
+
+
+
 
 
 
