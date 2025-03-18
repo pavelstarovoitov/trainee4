@@ -54,6 +54,12 @@
 ![image0011](image0011.png)
 
  ***
+## [nginx.conf](nginx.conf)
+
+## [index.html](index.html)
+
+## [Cсылка на сайт](https://trainee4.com)
+
 
 
 
