@@ -56,6 +56,8 @@
  ***
 ## [nginx.conf](nginx.conf)
 
+## [access.log](access_proxy.log)
+
 ## [index.html](index.html)
 
 ## [Cсылка на сайт](https://trainee4.com)
