@@ -1,0 +1,65 @@
+<html>
+<head>
+<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+<style>
+   body {
+    margin: 0;
+    padding: 0;
+    background-color: bisque;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+   }
+.cpu {
+  margin: 0;
+  padding: 0;
+  background-color: lightgreen;
+  text-align: left;
+  display: flex;
+  align-items: left;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
+  font-style: italic;
+}
+.contrainer {
+  display: grid;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="head">
+<h2>CPU Load Page</h2>
+</div>
+<div class="cpu">
+  </div>
+<block>
+    <script>
+        (function(){
+        
+          function get_value(){
+           
+            var q = new XMLHttpRequest(); //create request
+          
+            q.open("get", "/cpu_load", true);
+            q.send();  // send request to flask /cpu_load
+          
+            q.onload = function () {
+              // write information to <div class="cpu"></div>
+              document.querySelector(".cpu").innerHTML = "CPU LOAD: " + q.responseText; 
+              setTimeout(get_value, 2000); // update information each 2 seconds
+            }
+          }
+          
+          // call the function to get it started
+          get_value();
+        
+        })();
+        </script>
+</block>
+</div>
+</body>
+</html> 
