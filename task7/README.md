@@ -72,7 +72,7 @@
 
 ![image0027](image0027.png)
 
-##[Файл Скрипта](update_script.sh)
+## [Файл Скрипта](update_script.sh)
 ### Команда ssh -i /home/ubuntu/.ssh/task7.pem ubuntu@10.0.1.250 выполняет подключение к приватному хосту
 ### 'sudo apt update -y && echo "Update was "$(date) >> script_run_log.log' выполняет обновление на приватном хосте и записывает дату и время выполнения в файл script_run_log.log
 
