@@ -9,48 +9,41 @@
 
 ### Импортирую библиотеки
 ![image0001](image0001.png)
-![image0001](image0001.png)
+
 
 ### Определяю переменнные
 
 ![image0002](image0002.png)
-![image0002](image0002.png)
+
 
 ### Функция для создание одного instance с операционной системой ubuntu, user ubuntu и именем myname
 ### Функция возвращает ec2.Instance(id='i-*****') класс инстанса который был создан
-![image0003](image0003.png)
 ![image0003](image0003.png)
 
 ### Вызываю функцию которая создает инстанс, получаю ec2.Instance класс, из него получаю InstanceId
 ### по InstanceIds получаю PublicIpAddress инстанса
 ![image0004](image0004.png)
-![image0004](image0004.png)
 
 
 ### Функция для получения метрик через ssh подключения и вызова утилит bash
 ![image0005](image0005.png)
-![image0005](image0005.png)
+
 
 ### Функция для подмены публичного ключа
 
-![image0006](image0006.png)
 ![image0006](image0006.png)
 
 ###  Функция для удаления инстанса по InstanceIds
 
 ![image0007](image0007.png)
-![image0007](image0007.png)
 
 ### После вызова функции на создание инстанса жду 30 секунд
-![image0009](image0009.png)
 ![image0008](image0008.png)
 
 ### Затем получаю метрики, меняю ключ, удаляю инстанс
-![image0010](image0010.png)
 ![image0009](image0009.png)
 
 ### Результат выполнения скрипта 
-![image0011](image0011.png)
 ![image0010](image0010.png)
 
 ## [Скрипт для создание и удаления инстанса](create_instance.py)
@@ -60,17 +53,14 @@
 
 ### Получаю данные о инстансах
 
-![image0012](image0012.png)
 ![image0011](image0011.png)
 
 ### В зависимости от типа инстанса выполняю разные скрипты на установку aws cli
 
-![image0013](image0013.png)
 ![image0012](image0012.png)
 
 
 ### Передаю config и credentials файлы для aws cli
-![image0014](image0014.png)
 ![image0013](image0013.png)
 
 
@@ -80,7 +70,7 @@
 ## [redhat.sh ](redhat.sh)
 ## [macOS.sh ](macOS.sh)
 ## [win.sh ](win.sh)
-## [power.ps1 ](power.ps1)
+
 
 
 
