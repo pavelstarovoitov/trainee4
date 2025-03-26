@@ -101,4 +101,4 @@ for v in version_and_host:                 # Accoring OS execute .sh or .ps1 scr
         host = v['host']
         username = "Administrator"
         key = 'task2'
-        subprocess.run(('/home/starik/Documents/tasks/trainee4/scripts/win.sh'), shell=True)
+        subprocess.run(('./win.sh'), shell=True)
