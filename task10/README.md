@@ -72,6 +72,12 @@
 ## [win.sh ](win.sh)
 
 
+### power.ps1
+
+![image0014](image0014.png)
+
+
+
 
 
 
