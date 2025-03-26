@@ -103,4 +103,4 @@ getmetrics(host, key)                                       # get info about sys
 
 changekey(host, key, localkey)                              # replace key 
 
-# terminateinstance(instance)                                # delete intance
+terminateinstance(instance)                                # delete intance
