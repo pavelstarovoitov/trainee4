@@ -1,0 +1,1 @@
+Terraform project that create VPC with one Public and one Private Subnets, two Route table for subnets, Internet Gateway for Public subnet, Nat Gateway for Private subnet. Than create one EC2 instance in each Subnets. Also create one RDS Postgres instance. 
