@@ -8,10 +8,10 @@
 
 ![image0002](image0002.png)
 
-### Папке локального репозитория в .git/hooks переименоваю commit-msg.sample в commit-msg
+### В папке локального репозитория в .git/hooks переименоваю commit-msg.sample в commit-msg
 ![image0003](image0003.png)
 
-### Редоктирую commit-msg скрипт
+### Редактирую commit-msg скрипт
 
 ![image0004](image0004.png)
 
