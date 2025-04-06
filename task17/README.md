@@ -37,6 +37,21 @@
 
 ## [commit-msg](commit-msg)
 
+### Создаю GitHub Webhooks
+
+![image0012](image0012.png)
+
+### Создаю python flask скрипт на https://www.pythonanywhere.com/ чтобы получить url
+
+![image0015](image0015.png)
+
+## [pythonanywhere flask script](https://www.pythonanywhere.com/user/pavelstarovoitov91/shares/675e0480bce947ddb032b952be4aa5d1/)
+
+![image0013](image0013.png)
+
+![image0014](image0014.png)
+
+
 
 
 
