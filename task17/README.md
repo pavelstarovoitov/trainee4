@@ -8,16 +8,9 @@
 
 ![image0002](image0002.png)
 
-### В папке локального репозитория в .git/hooks переименоваю commit-msg.sample в commit-msg
-![image0003](image0003.png)
+### В папке локального репозитория в .git/hooks создаю post-commit 
+![image0016](image0016.png)
 
-### Редактирую commit-msg скрипт
-
-![image0004](image0004.png)
-
-### Теперь при выполнении git commit появляется измененное сообщение
-
-![image0005](image0005.png)
 
 ### В google.com получаю password для приложения
 
@@ -30,12 +23,12 @@
 ## [.env file](.env)
 
 
-### Добавляю вызов python скрипта в .git/hooks/commit-msg
+### Добавляю вызов python скрипта в .git/hooks/post-commit
 ![image0010](image0010.png)
 
 ![image0011](image0011.png)
 
-## [commit-msg](commit-msg)
+## [post-commit](post-commit)
 
 ### Создаю GitHub Webhooks
 

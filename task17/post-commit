@@ -1,0 +1,10 @@
+#!/bin/sh
+#
+# This script send email after commit
+#
+echo "Hello, this is commit-msg"
+
+REPO_NAME=$(basename "$PWD")
+COMMIT_MSG=$(git log -1  HEAD)
+/home/starik/Documents/selenium/sender.py -s "Git Repository Updated: $REPO_NAME" -b "$COMMIT_MSG"
+
