@@ -1,0 +1,14 @@
+---
+- hosts: all
+  become: true                       # become sudo user
+  become_method: sudo
+  become_user: root
+  remote_user: ansible
+  
+  tasks:
+    - name: Print  os family facts        # print OS type in console
+      ansible.builtin.debug:
+        var: ansible_os_family
+  roles:                                 # run docker role 
+   - docker
+

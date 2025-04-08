@@ -1,0 +1,56 @@
+---
+
+- name: Install Docker on RedHat Family
+  yum:
+    name=docker
+    state=latest
+  when:
+    ansible_os_family == "RedHat"
+  notify:
+    - docker systemd                         #check docker service
+
+
+- name: Install Docker on Debian Family
+  apt:
+    name=docker.io
+    state=latest
+  when:
+    ansible_os_family == "Debian"
+  notify:
+    - docker systemd
+
+- name: Create a directory if it does not exist
+  ansible.builtin.file:
+    path: /usr/share/nginx/html
+    state: directory
+    mode: '0755'
+
+- name: Copy index page for Debian
+  copy:
+    src: index_debian.html
+    dest: /usr/share/nginx/html/index.html
+    mode: '0644'
+  tags: [ 'update', 'sync' ]
+  when:
+    ansible_os_family == "Debian"
+
+- name: Copy index page for RedHat
+  copy:
+    src: index_redhat.html
+    dest: /usr/share/nginx/html/index.html           
+    mode: '0644'
+  tags: [ 'update', 'sync' ]
+  when:
+    ansible_os_family == "RedHat"
+
+
+
+- name: Run docker container on Debian and RedHat
+  docker_container:
+    name: mynginx
+    image: nginx:1.27.4-alpine
+    volumes:                                             # create volume for container where was copied custom index.html 
+      - /usr/share/nginx/html:/usr/share/nginx/html
+    ports:
+      - "80:80"
+  

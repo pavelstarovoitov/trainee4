@@ -1,0 +1,6 @@
+---
+- name: docker systemd          # check sudo systemctl status docker 
+  systemd:                      # docker serivce should start on boot and be started
+    name: docker
+    enabled: yes
+    state: started
