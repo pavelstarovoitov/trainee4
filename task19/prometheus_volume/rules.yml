@@ -1,0 +1,12 @@
+groups:
+ - name: cpu usage
+   rules:
+   - alert: HighCPUUsage
+     expr: avg without (mode,cpu)(1- rate(node_cpu_seconds_total{mode='idle'}[60s]))*100 > 1
+     for: 1m
+     labels:
+      severity: critical
+     annotations:
+      summary: "High CPU usage detected"
+      description: "Instance {{ $labels.instance }} has been using {{ $value }}% CPU for over 1 minutes."
+

@@ -1,0 +1,18 @@
+
+global:
+  resolve_timeout: 10s
+
+route:
+  receiver: 'telegram'
+  group_by: ['alertname']
+  repeat_interval: 10s
+
+receivers:
+- name: 'telegram'
+  telegram_configs:
+  - send_resolved: true
+    bot_token: 'bot7697742315:AAEfQ_y41EoFQT1XppjB1UHUAs8UF2lN0qs'
+    api_url: 'https://api.telegram.org/bot7697742315:AAEfQ_y41EoFQT1XppjB1UHUAs8UF2lN0qs/sendMessage?chat_id=250914998'
+    chat_id: 250914998
+    parse_mode: 'HTML'
+    

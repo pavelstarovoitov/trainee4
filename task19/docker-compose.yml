@@ -1,0 +1,28 @@
+version: '3'
+services:
+  prometheus:
+    image: prom/prometheus:v2.53.4
+    volumes:
+      - "./prometheus_volume:/etc/prometheus"
+    networks:
+      - prometheus_net
+    ports:
+      - 9090:9090
+    
+  node_exporter:
+    image: prom/node-exporter:v1.9.1
+    networks:
+      - prometheus_net
+    ports:
+      - 9100:9100
+  alert_manager:
+    image: prom/alertmanager:v0.28.1
+    volumes:
+      - "./alertmanager_volume:/etc/alertmanager"
+    networks:
+      - prometheus_net
+    ports:
+      - 9093:9093
+networks:
+  prometheus_net:
+    driver: bridge
