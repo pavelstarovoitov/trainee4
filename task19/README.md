@@ -1,6 +1,6 @@
 Задача №22 Поднять в композе Прометеус / нод-экспортер / алертменаджер. Написать алерт для прометеуса по cpu. И вывод будет производиться в слак или телеграмм на выбор. 2 дня
 
-### Создаю docker-compose.yml. Файл включает три сервиса prometeus, node_exporter и alert_manager. По именам сервисов к ним можно будет обратиться в дальнейшем так они находяться в сети prometheus_net в сети типа bridge с возможностью DNS resolution.
+### Создаю docker-compose.yml. Файл включает три сервиса prometeus, node_exporter и alert_manager. По именам сервисов к ним можно будет обратиться в дальнейшем так как они находяться в сети prometheus_net типа bridge с возможностью DNS resolution.
 ![image0001](image0001.png)
 ## [docker-compose.yml](docker-compose.yml)
 
@@ -30,6 +30,8 @@
 ### Web интерфейсы Prometheus, Alertmanager и Node Exporter
 
 ![image0007](image0007.png)
+
+![image0010](image0010.png)
 
 ![image0008](image0008.png)
 
