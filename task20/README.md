@@ -5,10 +5,10 @@
 ### На инстансе создают docker-compose.yml и запускаю в нем node_exporter
 ![image0001](image0001.png)
 ![image0004](image0004.png)
-### В файле конфигурации prometheus.yml добавлюя новый job 
+### В файле конфигурации prometheus.yml добавляю новый job 
 ![image0005](image0005.png)
 ## [prometheus.yml ](./prometheus_volume/prometheus.yml )
-### В файле конфигурации rules.yml добавлюя новый alert HighMemoryUsage
+### В файле конфигурации rules.yml добавляю новый alert HighMemoryUsage
 
 ![image0006](image0006.png)
 
