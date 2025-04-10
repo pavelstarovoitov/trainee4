@@ -1,0 +1,20 @@
+groups:
+ - name: nodes_monitor
+   rules:
+   - alert: HighCPUUsage
+     expr: avg without (mode,cpu)(1- rate(node_cpu_seconds_total{mode='idle',job='node'}[60s]))*100 > 1
+     for: 10s
+     labels:
+      severity: critical
+     annotations:
+      summary: "High CPU usage detected"
+      description: "Instance {{ $labels.instance }} has been using {{ $value }}% CPU for over 1 minutes." 
+   - alert: HighMemoryUsage
+     expr: node_memory_Active_bytes{job='node2'} > 10e6
+     for: 10s
+     labels:
+      severity: critical
+     annotations:
+      summary: "High Memory usage detected"
+      description: "Instance {{ $labels.instance }} has been using {{ $value }}% Memory for over 1 minutes." 
+

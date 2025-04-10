@@ -1,0 +1,32 @@
+
+global:
+  resolve_timeout: 10s
+  slack_api_url: 'https://hooks.slack.com/services/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'
+
+route:
+  receiver: 'slack'
+  group_by: ['alertname']
+  group_wait: 10s
+  repeat_interval: 10s
+  # receiver: 'telegram'
+  # group_by: ['alertname']
+  # repeat_interval: 10s
+  
+
+# route:
+#   receiver: 'slack'
+#   group_by: ['alertname']
+#   repeat_interval: 10s
+
+receivers:
+- name: 'telegram'
+  telegram_configs:
+  - send_resolved: true
+    bot_token: 'bot7697742315:AAEfQ_y41EoFQT1XppjB1UHUAs8UF2lN0qs'
+    api_url: 'https://api.telegram.org/bot7697742315:AAEfQ_y41EoFQT1XppjB1UHUAs8UF2lN0qs/sendMessage?chat_id=250914998'
+    chat_id: 250914998
+    parse_mode: 'HTML'
+- name: 'slack'
+  slack_configs:
+  - channel: '#notifyme' 
+    send_resolved: true
