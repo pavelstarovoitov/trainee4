@@ -1,0 +1,57 @@
+services:
+  loki:
+    image: grafana/loki:3.4
+    container_name: loki
+    # restart: unless-stopped
+    ports:
+      - 3100:3100
+    volumes:
+      - ./loki_conf:/etc/loki/
+      - loki:/tmp
+    networks:
+      - grafana_net
+  promtail:
+    image: grafana/promtail:3.4
+    container_name: promtail
+    # restart: unless-stopped
+    volumes:
+      - ./promtail_conf:/etc/promtail/
+      - /var/log:/logs # location of the log files to import
+    ports:
+      - 9080:9080
+    networks:
+      - grafana_net
+  prometheus:
+    image: prom/prometheus:v2.53.4
+    volumes:
+      - "./prometheus_volume:/etc/prometheus"
+    networks:
+      - grafana_net
+    ports:
+      - 9090:9090
+    
+  node_exporter:
+    image: prom/node-exporter:v1.9.1
+    networks:
+      - grafana_net
+    ports:
+      - 9100:9100
+  grafana:
+    image: grafana/grafana-enterprise
+    container_name: grafana
+    restart: unless-stopped
+    networks:
+      - grafana_net
+    ports:
+      - '3000:3000'
+    volumes:
+      - grafana-storage:/var/lib/grafana
+
+networks:
+  grafana_net:
+    driver: bridge
+
+volumes:
+    loki:
+      name: loki
+    grafana-storage: {}
