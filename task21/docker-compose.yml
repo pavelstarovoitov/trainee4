@@ -1,0 +1,32 @@
+services:
+  loki:
+    image: grafana/loki:3.4
+    container_name: loki
+    # restart: unless-stopped
+    ports:
+      - 3100:3100
+    volumes:
+      - ./loki_conf:/etc/loki/
+      - loki:/tmp
+    networks:
+      - loki_net
+  promtail:
+    image: grafana/promtail:3.4
+    container_name: promtail
+    # restart: unless-stopped
+    volumes:
+      - ./promtail_conf:/etc/promtail/
+      - /var/log/nginx:/logs # location of the log files to import
+    ports:
+      - 9080:9080
+    networks:
+      - loki_net
+
+networks:
+  loki_net:
+    driver: bridge
+
+volumes:
+    loki:
+      name: loki
+
