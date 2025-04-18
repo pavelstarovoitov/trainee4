@@ -41,7 +41,7 @@ NEW
 
 ![image0011](image0011.png)
 
-### Создаю EC2 инстанс на нем создаю пользователя jenkins, уснавливаю docker, java. Добавлюя инстанс в качестве worker для jenkins
+### Создаю EC2 инстанс на нем создаю пользователя jenkins, уснавливаю docker, java. Добавляю инстанс в качестве worker для jenkins
 
 ![image0012](image0012.png)
 
