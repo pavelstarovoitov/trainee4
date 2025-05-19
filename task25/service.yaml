@@ -1,0 +1,34 @@
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2025-05-19T10:41:27Z"
+  labels:
+    app: nginx-app
+  name: nginx-app
+  namespace: demo-app
+  resourceVersion: "3486"
+  uid: de708061-4920-42e0-b4c2-965febb87185
+spec:
+  clusterIP: 10.103.181.158
+  clusterIPs:
+  - 10.103.181.158
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 31259
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: nginx-app
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
