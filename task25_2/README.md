@@ -8,7 +8,7 @@
 
 ![image0002](image0002.png)
 
-### Зная ip адресс macter node и node token, добавляю к кластеру worker node
+### Зная ip адрес macter node и node token, добавляю к кластеру worker node
 
 ![image0003](image0003.png)
 
@@ -18,13 +18,15 @@
 
 ![image0005](image0005.png)
 
+## [nginx.yaml](nginx.yaml)
+
 ![image0006](image0006.png)
 
 ![image0007](image0007.png)
 
 ![image0008](image0008.png)
 
-# [nginx.yaml](nginx.yaml)
+
 
 
 
