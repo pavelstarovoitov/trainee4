@@ -17,7 +17,7 @@
 # Копирую папку с темплэйтами в папку mycluster
 ![image0007](image0007.png)
 
-# В папке mycluster редоктирую файл inverntory.ini, добовляя в него ip адреса control plane и worker кластера.
+# В папке mycluster редактирую файл inverntory.ini, добавляя в него ip адреса control plane и worker кластера.
  
 ![image0008](image0008.png)
 
