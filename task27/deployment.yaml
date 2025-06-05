@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-app
+  labels:
+    app: nginx-app
+spec:
+  selector:
+    matchLabels:
+      app: nginx-app
+  template:
+    metadata:
+      labels:
+        app: nginx-app
+    spec:
+      containers:
+      - name: nginx
+        image: pavelstarovoitov/trainee4nginx:54
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 10
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 80
+          initialDelaySeconds: 10
+          periodSeconds: 15
+        startupProbe:
+          httpGet:
+            path: /healthz
+            port: 80
+          failureThreshold: 30
+          periodSeconds: 10
+        volumeMounts:
+          - name: nginx-conf
+            mountPath: /etc/nginx/nginx.conf
+            subPath: nginx.conf
+          - name: index
+            mountPath: /var/www/html/index.html
+            subPath: index.html
+      volumes:
+      - name: nginx-conf
+        configMap:
+          name: nginx-config
+      - name: index
+        configMap:
+          name: nginx-deploy-one 
+      
+      imagePullSecrets:
+      - name: my-secret
