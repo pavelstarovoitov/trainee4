@@ -27,7 +27,7 @@
 
 # [storage-loki-0.yml](storage-loki-0.yml)
 
-![image0025](image0025.png)
+![image0027](image0027.png)
 
 ## Устанавливаю локи
 
@@ -52,7 +52,7 @@
 
 # [prom-pvc.yml](prom-pvc.yml)
 
-![image0025](image0025.png)
+![image0028](image0028.png)
 
 ## Устанавливаю графана, прометеус, нод-эскпортер 
 
