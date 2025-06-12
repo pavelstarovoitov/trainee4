@@ -46,13 +46,6 @@
 
 ![image0023](image0023.png)
 
-## Для графана, прометеус, нод-эскпортер  создаю PV and PVC
-
-# [prom-pv.yml](prom-pv.yml)
-
-# [prom-pvc.yml](prom-pvc.yml)
-
-![image0028](image0028.png)
 
 ## Устанавливаю графана, прометеус, нод-эскпортер 
 
@@ -61,6 +54,26 @@
 ![image0024](image0024.png)
 
 ![image0025](image0025.png)
+
+## Для графана, прометеус, нод-эскпортер  создаю PV and PVC
+
+# [prom-pv.yml](prom-pv.yml)
+
+# [prom-pvc.yml](prom-pvc.yml)
+
+# [kube-stack-values.yml](kube-stack-values.yml)
+
+![image0033](image0033.png)
+
+![image0032](image0032.png)
+
+![image0031](image0031.png)
+
+![image0030](image0030.png)
+
+![image0029](image0029.png)
+
+
 
 ## Законектить Прометеус и локи в графану 
 
